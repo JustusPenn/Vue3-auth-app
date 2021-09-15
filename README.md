@@ -1,4 +1,4 @@
-# boolo
+# Vue 3 Authentication and Authorization Application
 
 ## Project setup
 ```

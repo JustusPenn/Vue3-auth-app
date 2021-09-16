@@ -18,7 +18,7 @@
 			</li>
 		</div>
 
-		<div class="navbar-nav ml-auto">
+		<div class="navbar-nav ml-auto" v-show="!currentUser">
 			<li class="nav-item">
 				<router-link to="/register" class="nav-link">
 					<fa-icon icon="user-plus"/> Sign Up

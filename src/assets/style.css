@@ -1,0 +1,17 @@
+.card {
+    padding-bottom: 0;
+}
+
+.profile-card-img{
+    height: 150px;
+    width: auto;
+}
+
+.form-control, .btn {
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border: none;
+    border-bottom: solid 1px #0d6efd;
+}

@@ -40,7 +40,7 @@
 <script>
 
 export default {
-  	name: 'App',
+  name: 'App',
 	computed: {
 		currentUser() {
 			return this.$store.state.auth.user;

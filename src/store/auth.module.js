@@ -25,7 +25,7 @@ export const auth = {
             AuthService.logout();
             commit('logout')
         },
-        regisater({ commit }, user) {
+        register({ commit }, user) {
             return AuthService.register(user).then(
                 response => {
                     commit('registerSuccess');

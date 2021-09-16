@@ -5,6 +5,9 @@ import App from './App.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
+// StyleSheet
+import './assets/style.css'
+
 // Router
 import router from "./router";
 
@@ -13,7 +16,6 @@ import store from "./store";
 
 // FontAwesome Icons
 import { FontAwesomeIcon } from './plugins/fontawesome'
-
 
 const app = createApp(App)
 

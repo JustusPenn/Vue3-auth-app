@@ -1,7 +1,7 @@
 <template>
-    <div class="col-md-12">
+    <div class="col-md-8 m-auto mt-5">
         <div class="card card-container">
-            <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="profile-img" class="profile-img-card">
+            <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="profile-img" class="profile-card-img">
             <Form @submit="handleLogin" :validation-schema="schema">
                 <div class="mb-3">
                     <label for="username">Username</label>
@@ -22,7 +22,7 @@
                     </button>
                 </div>
 
-                <div class="mb-3">
+                <div class="form-group">
                     <div v-if="message" class="alert alert-danger" role="alert">
                         {{ message }}
                     </div>
@@ -85,5 +85,4 @@ export default {
 </script>
 
 <style>
-
 </style>

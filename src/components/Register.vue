@@ -1,7 +1,7 @@
 <template>
-    <div class="col-md-12">
-        <div class="card card-container">
-            <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="profile-img" class="profile-img-card">
+    <div class="col-md-8 m-auto">
+        <div class="card card-container mt-5">
+            <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="profile-img" class="profile-card-img">
             <Form @submit="handleRegister" :validation-schema="schema">
                 <div v-if="!successful">
                     <div class="mb-3">
@@ -22,7 +22,7 @@
                         <ErrorMessage name="password" class="text-danger"/>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-0">
                         <button class="btn btn-primary btn-block" :disabled="loading">
                             <span v-show="loading" class="spinner-border spinner-border-sm"></span>
                             <span>Sign Up</span>
@@ -78,7 +78,9 @@ export default {
             this.successful = false;
             this.loading = true;
 
-            this.$store.dispatch('auth/register', user).then (
+            // console.log(user);
+
+            this.$store.dispatch("auth/register", user).then(
                 (data) => {
                     this.message = data.message;
                     this.successful = true;

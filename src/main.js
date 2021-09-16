@@ -1,4 +1,23 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+// Bootstrap 5
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
+
+// Router
+import router from "./router";
+
+// Store
+import store from "./store";
+
+// FontAwesome Icons
+import { FontAwesomeIcon } from './plugins/fontawesome'
+
+
+const app = createApp(App)
+
+app.use(router)
+app.use(store)
+app.component("fa-icon", FontAwesomeIcon)
+app.mount('#app')

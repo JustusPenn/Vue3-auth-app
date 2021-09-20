@@ -1,6 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+// TokenRefresh Interceptor
+import setupInterceptors from './services/setupInterceptors'
+
+setupInterceptors(store)
+
 // Bootstrap 5
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"

@@ -30,6 +30,14 @@
 				</router-link>
 			</li>
 		</div>
+		<div class="navbar-nav ml-auto" v-show="currentUser">
+			<li class="nav-item">
+				<button @click="logOut" class="btn nav-link">
+					<fa-icon icon="sign-out-alt"/> 
+					Logout
+				</button>
+			</li>
+		</div>
 	</nav>
 
 	<div class="container">
@@ -38,7 +46,7 @@
 </template>
 
 <script>
-
+import EventBus from "./common/EventBus"
 export default {
   name: 'App',
 	computed: {
@@ -62,11 +70,19 @@ export default {
 	},
 	methods: {
 		logOut() {
-			this.store.dispatch('auth/logout');
+			this.$store.dispatch('auth/logout');
 			this.$router.push('/login');
 		}
+	},
+	mounted() {
+		EventBus.on('logOut', () => {
+			this.logOut();
+		});
+	},
+	deforeDestroy() {
+		EventBus.remove('logout');
 	}
-}
+};
 </script>
 
 <style>
